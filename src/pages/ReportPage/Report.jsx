@@ -4,7 +4,7 @@ import Cards from '../../Components/Qualifications/QualificationsCards'
 import GeneralInfo from '../../Components/GeneralInfo/GeneralInfo'
 import Footer from '../../Components/Footer/Footer'
 import PDFGeneratorButton from '../../Components/PdfButton/PdfButton'
-import NavBar from '../../Components/navBar/navBar'
+import NavBar from '@/Components/navBar/navBar'
 
 
 
