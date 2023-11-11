@@ -5,7 +5,7 @@ import infoIcon from '../../assets/infoIcon.svg';
 import tableIcon from '../../assets/tableIcon.svg';
 import { Link } from 'react-router-dom';
 
-export function NavBar() {
+function NavBar() {
   return (
     <div className={style.navBarContainer}>
       <div className={style.btn}>
@@ -31,3 +31,5 @@ export function NavBar() {
     </div>
   );
 }
+
+export default NavBar
