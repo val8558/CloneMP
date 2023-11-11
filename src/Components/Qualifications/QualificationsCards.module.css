@@ -1,0 +1,36 @@
+.cards {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.patient {
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+     font-family: 'Exo', sans-serif;
+     border: solid 0.06rem var(--rosaClaro);
+     padding: 1rem;
+     border-radius: 1rem;
+}
+
+.patient p {
+   margin-bottom: 0.5rem;
+}
+
+.doctor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Exo', sans-serif;
+    border: solid 0.06rem var(--rosaClaro);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.doctor p {
+    margin-bottom: 0.5rem; 
+}
+

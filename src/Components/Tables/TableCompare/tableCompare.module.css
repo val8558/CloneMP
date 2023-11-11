@@ -1,0 +1,43 @@
+
+.table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: 'Exo';
+}
+
+.evenRow {
+  background-color: lightblue;
+}
+
+.oddRow {
+  background-color: white;
+}
+
+td, th {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Exo';
+  text-align: justify;
+  padding: 1.5rem 5rem;
+}
+
+.name h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Exo';
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--amarelo);
+  padding: 1rem;
+  color: white;
+}

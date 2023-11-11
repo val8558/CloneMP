@@ -1,0 +1,16 @@
+.Btn > button {  
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    background: transparent;
+    color: var(--rosaClaro);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s
+}
+
+.Btn > button:hover {
+    background-color: var(--rosaClaro);
+    color: var(--branco);
+}

@@ -1,0 +1,33 @@
+.footer{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--azulClaro);
+    color: white;
+    font-family: 'Exo';
+    padding: 1rem;
+}
+
+.footer h1{
+    font-size: 1rem;
+}
+
+.footer p{
+    font-size: 1rem;
+}
+
+.footer a{
+    color: white;
+    font-style: normal;
+}
+
+.tm{
+    display: flex;
+    justify-content: center;
+    background-color: var(--rosaClaro);
+    font-family: 'Exo';
+    font-size: 0.5rem;
+    color: var(--branco);
+}

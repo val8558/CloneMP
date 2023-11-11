@@ -1,0 +1,28 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.25rem;
+    margin-bottom: rem;
+    padding: 05rem;
+    text-align: justify;
+
+}
+
+.cards h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Exo';
+    font-weight: bold;
+    margin-bottom: 2rem;
+    background-color: var(--azulClaro);
+    padding: 1rem;
+    color: white;
+    margin-top: 2rem;
+}
+
+.cards p {
+    font-family: 'Exo';
+    font-weight: lighter;
+    line-height: 1.5rem;
+}

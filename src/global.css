@@ -1,0 +1,34 @@
+:root {
+/* cores gerais do projeto */
+
+--rosaClaro: #FA5F8D;
+--rosaEscuro: #CD4C6B;
+--azulClaro: #139Abe;
+--azulEscuro: #2C8AF2;
+--verdeClaro: #42DC8B;
+--verddeEscuro: #699855;
+--amarelo: #F2AE2C;
+--laranja: #F25B2C;
+--cinza1: #433f40;
+--cinza2: #CCCACA;
+--cinza3: #E9DDE0;
+--cinza4: #F2E9E9;
+--branco: #FFFFFF;
+--vinho: #722F3E;
+
+/*fontes utilizadas no projeto*/
+
+--fonteTexto: 'Exo';
+
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+}
+
+body { 
+  background-color: var(--cinza4);
+}

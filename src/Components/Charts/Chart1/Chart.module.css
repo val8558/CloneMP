@@ -1,0 +1,33 @@
+.chart {
+    font-family: 'Exo';
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Exo';
+    text-align: justify;
+    padding: 05rem;
+}
+
+.name h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Exo';
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--verdeClaro);
+    padding: 1rem;
+    color: white;
+}
+
+.name p {
+
+}
