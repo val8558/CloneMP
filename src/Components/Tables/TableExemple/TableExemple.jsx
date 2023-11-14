@@ -1,5 +1,5 @@
 
-import styles from './tableExemple.module.css'
+import styles from './TableExemple.module.css'
 
 const TableExemple = () => {
   const data = [
