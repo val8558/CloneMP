@@ -1,6 +1,6 @@
 import style from './navBar.module.css';
 import chartIcon from '../../assets/chartIcon.svg';
-import infoIcon from '../../assets/infoIcon.svg';
+import infoIcon from '../../assets/InfoIcon.svg';
 import tableIcon from '../../assets/tableIcon.svg';
 import { Link } from 'react-router-dom';
 
