@@ -1,5 +1,5 @@
 
-import styles from './TableCompare.module.css'
+import styles from './tableCompare.module.css'
 
 
 const TableCompare = () => {
