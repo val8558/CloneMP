@@ -1,4 +1,3 @@
-import React from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import styles from './Chart.module.css'
 import { useAuth } from "../../../Context/AuthContext";
@@ -49,6 +48,6 @@ function Chart2() {
       </BarChart>
     </div>
   );
-};
+}
 
-export default Chart2;
+export default Chart2

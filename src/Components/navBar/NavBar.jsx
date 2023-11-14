@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './navBar.module.css';
 import chartIcon from '../../assets/chartIcon.svg';
 import infoIcon from '../../assets/infoIcon.svg';

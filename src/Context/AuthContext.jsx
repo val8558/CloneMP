@@ -1,6 +1,6 @@
-import React, { useEffect, useState, createContext, useContext } from "react";
+import { useState, createContext, useContext } from "react";
 import { getGameResult } from "../Service/report";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext({});
 

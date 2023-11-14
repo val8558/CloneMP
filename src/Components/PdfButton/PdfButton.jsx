@@ -13,6 +13,6 @@ function PrintBtn () {
     </div>
 
   );
-};
+}
 
-export default PrintBtn;
+export default PrintBtn

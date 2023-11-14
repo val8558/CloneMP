@@ -1,4 +1,3 @@
-import React from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import styles from './Chart.module.css'
 
@@ -49,6 +48,6 @@ function Chart4() {
 
 
     );
-};
+}
 
 export default Chart4

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './tableExemple.module.css'
 
 const TableExemple = () => {
