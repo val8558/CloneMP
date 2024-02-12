@@ -28,6 +28,7 @@ function Cards() {
                     <br />
                     <p><strong>Nome:</strong> {patientData.name}</p>
                     <p><strong>Profissão:</strong> {patientData.work}</p>
+                    <p><strong>Data de Nascimento:</strong> {patientData.birth_date}</p>
                     <p><strong>Lateralidade:</strong> {patientData.laterality}</p>
                     <p><strong>Escolaridade:</strong> {patientData.category}</p>
                     <p><strong>E-mail:</strong> {patientData.email}</p>

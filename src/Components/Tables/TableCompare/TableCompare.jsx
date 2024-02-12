@@ -4,6 +4,9 @@ import styles from './tableCompare.module.css'
 
 const TableCompare = () => {
   const data= [
+    {
+
+    },
     { Função: "Função Executiva - Controle Inibitório", Sigla: "FECI", Acerto: 16, Erro: 3, Omissões: 14, AcertoLast: 16, ErroLast: 3, OmissõesLast: 14},
     { Função: "Atenção Seletiva - Esquerda", Sigla: "ASE", Acerto: 13, Erro: 3, Omissões: 2, AcertoLast: 13, ErroLast: 3, OmissõesLast: 2},
     { Função: "Atenção Seletiva - Direita", Sigla: "ASD", Acerto: 15, Erro: 0, Omissões: 0,  AcertoLast: 15, ErroLast: 0, OmissõesLast: 0},

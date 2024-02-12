@@ -1,19 +1,50 @@
 import styles from './table.module.css'
 import okay from '../../../assets/checkbox.svg'
 import nokay from '../../../assets/alert.svg'
+import {useAuth} from '../../../Context/AuthContext'
+
 
 const Table = () => {
+
+
+  const {apiData} = useAuth()
+
+  const gameData = apiData.games
+
+  // “Ate” = Função Executiva - Controle Inibitório  
+  // “ConCon” = Atenção Seletiva – Esquerda 
+  // “ConRCon” = Atenção Seletiva – Direita  
+  // ”ConAle” = Atenção Alternada – Esquerda 
+  // “ConRAle” = Atenção Alternada – Direita
+  // “ConMen” = Memória de Curto Prazo – Esquerda
+  // “ConRMen” = Memória de Curto Prazo – Direita
+  // “Vmen” = Visuopercepção
+  // “Men” = Memória de Longo Prazo
+  
+  // A = acerto
+  // E = erro
+  // O = Omissão
+  // MPTGDLPGYT89ZZLQY
+
+
+
+  const games = [
+    
+  ]
+
   const data = [
-    { Função: "Função Executiva - Controle Inibitório", Sigla: "FECI", Acerto: 16, Erro: 3, Omissões: 14, Média: 26, Pe:"28±2"},
-    { Função: "Atenção Seletiva - Esquerda", Sigla: "ASE", Acerto: 13, Erro: 3, Omissões: 2, Média: 11, Pe:"13±2" },
-    { Função: "Atenção Seletiva - Direita", Sigla: "ASD", Acerto: 15, Erro: 0, Omissões: 0, Média: 11, Pe:"13±2" },
-    { Função: "Atenção Alternada - Esquerda", Sigla: "AAE", Acerto: 11, Erro: 4, Omissões: 4, Média: 11, Pe:"13±2" },
-    { Função: "Atenção Alternada - Direita", Sigla: "AAD", Acerto: 15, Erro: 0, Omissões: 4, Média: 11, Pe: "13±2" },
-    { Função: "Memória de Curto Prazo - Esquerda", Sigla: "MCPE", Acerto: 5, Erro: 2, Omissões: 0, Média: 5, Pe: "6±1"  },
-    { Função: "Memória de Curto Prazo - Direita", Sigla: "MCPD", Acerto: 7, Erro: 0, Omissões: 0, Média: 5,  Pe: "6±1"},
-    { Função: "Visuopercepção", Sigla: "VP", Acerto: 27, Erro: 0, Omissões: 33, Média: 44, Pe: "52±8"},
-    { Função: "Memória de Longo Prazo", Sigla: "MLP", Acerto: 11, Erro: 4, Omissões: 4, Média: 9, Pe:"12±3"}
+    
+    { name: "FECI", Acertos: resultsData.AteA, Erros: resultsData.AteE, Omissões: resultsData.AteO},
+    { name: "ASE", Acertos: resultsData.ConConA, Erros: resultsData.ConConE, Omissões: resultsData.ConConO},
+    { name: "ASD", Acertos: resultsData.ConRConA, Erros: resultsData.ConRConE, Omissões: resultsData.ConRConO},
+    { name: "AAE", Acertos: resultsData.ConAleA, Erros: resultsData.ConAleE, Omissões: resultsData.ConAleO},
+    { name: "AAD", Acertos: resultsData.ConRAleA, Erros: resultsData.ConRAleE, Omissões: resultsData.ConRAleO},
+    { name: "MCPE", Acertos: resultsData.ConMenA, Erros: resultsData.ConMenE, Omissões:  resultsData.ConMenO},
+    { name: "MCPD", Acertos: resultsData.ConRMenA, Erros: resultsData.ConRMenE, Omissões:  resultsData.ConRMenO},
+    { name: "VP", Acertos: resultsData.VmenA, Erros: resultsData.VmenE, Omissões:  resultsData.VmenO},
+    { name: "MLP", Acertos: resultsData.menA, Erros: resultsData.menE, Omissões:  resultsData.menO},
   ];
+ 
 
   return (
     <>

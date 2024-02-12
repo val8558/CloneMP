@@ -10,7 +10,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(gameKey )
+    console.log(gameKey)
     authenticateWithCode(gameKey);
   }
    

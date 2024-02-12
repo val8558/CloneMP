@@ -5,7 +5,7 @@ import { useAuth } from "../../../Context/AuthContext";
 function Chart2() {
   const {apiData} = useAuth()
 
-  const resultsData = JSON.parse(apiData.game.result)
+  const resultsData = JSON.parse(apiData.games.result)
 
   // “Ate” = Função Executiva - Controle Inibitório  
   // “ConCon” = Atenção Seletiva – Esquerda 
