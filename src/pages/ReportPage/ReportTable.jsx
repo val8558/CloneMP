@@ -20,7 +20,7 @@ function ReportTable() {
     <TableExemple />
     <Table />
     <TableResult />
-    <TableCompare />
+    {/* <TableCompare /> */}
     <Footer />
     </>
   )

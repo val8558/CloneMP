@@ -19,7 +19,7 @@ function Chart1() {
       console.log(apiData.games[gameArray])
       ;
 
-      if (resultado === "MPTDHMHA7TZO7MSHX") {
+      if (resultado === "MPTMMHM762BTSFDQM") {
         jogoCorrespondente = apiData.games[gameArray];
 
       console.log()
@@ -41,7 +41,7 @@ function Chart1() {
         { name: "MCPE", Acertos: resultsData.ConMenA, Erros: resultsData.ConMenE, Omissões:  resultsData.ConMenO},
         { name: "MCPD", Acertos: resultsData.ConRMenA, Erros: resultsData.ConRMenE, Omissões:  resultsData.ConRMenO},
         { name: "VP", Acertos: resultsData.VmenA, Erros: resultsData.VmenE, Omissões:  resultsData.VmenO},
-        { name: "MLP", Acertos: resultsData.VmenA, Erros: resultsData.VmenE, Omissões:  resultsData.VmenO},
+        { name: "MLP", Acertos: resultsData.MenA, Erros: resultsData.MenE, Omissões:  resultsData.MenO},
       ];
 
     return (
@@ -76,3 +76,21 @@ function Chart1() {
 }
 
 export default Chart1;
+
+
+  // “Ate” = Função Executiva - Controle Inibitório  
+  // “ConCon” = Atenção Seletiva – Esquerda 
+  // “ConRCon” = Atenção Seletiva – Direita  
+  // ”ConAle” = Atenção Alternada – Esquerda 
+  // “ConRAle” = Atenção Alternada – Direita
+  // “ConMen” = Memória de Curto Prazo – Esquerda
+  // “ConRMen” = Memória de Curto Prazo – Direita
+  // “Vmen” = Visuopercepção
+  // “Men” = Memória de Longo Prazo
+  
+  // A = acerto
+  // E = erro
+  // O = Omissão
+  // MPTGDLPGYT89ZZLQY
+
+ 
