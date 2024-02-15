@@ -1,21 +1,79 @@
-
+import { useAuth } from '../../../Context/AuthContext';
 import styles from './tableCompare.module.css'
 
 
 const TableCompare = () => {
-  const data= [
-    {
 
-    },
-    { Função: "Função Executiva - Controle Inibitório", Sigla: "FECI", Acerto: 16, Erro: 3, Omissões: 14, AcertoLast: 16, ErroLast: 3, OmissõesLast: 14},
-    { Função: "Atenção Seletiva - Esquerda", Sigla: "ASE", Acerto: 13, Erro: 3, Omissões: 2, AcertoLast: 13, ErroLast: 3, OmissõesLast: 2},
-    { Função: "Atenção Seletiva - Direita", Sigla: "ASD", Acerto: 15, Erro: 0, Omissões: 0,  AcertoLast: 15, ErroLast: 0, OmissõesLast: 0},
-    { Função: "Atenção Alternada - Esquerda", Sigla: "AAE", Acerto: 11, Erro: 4, Omissões: 4,  AcertoLast: 11, ErroLast: 4, OmissõesLast: 4},
-    { Função: "Atenção Alternada - Direita", Sigla: "AAD", Acerto: 15, Erro: 0, Omissões: 4,  AcertoLast: 15, ErroLast: 0, OmissõesLast: 4},
-    { Função: "Memória de Curto Prazo - Esquerda", Sigla: "MCPE",  Acerto: 5, Erro: 2, Omissões: 0,  AcertoLast: 5, ErroLast: 2, OmissõesLast: 0},
-    { Função: "Memória de Curto Prazo - Direita", Sigla: "MCPD", Acerto: 7, Erro: 0, Omissões: 0,  AcertoLast: 7, ErroLast: 0, OmissõesLast: 0},
-    { Função: "Visuopercepção", Sigla: "VP", Acerto: 27, Erro: 0, Omissões: 33, AcertoLast: 27,  ErroLast: 0, OmissõesLast: 33,},
-    { Função: "Memória de Longo Prazo", Sigla: "MLP", Acerto: 11, Erro: 4, Omissões: 4, AcertoLast: 11, ErroLast: 4, OmissõesLast: 4},
+  const {apiData} = useAuth();
+
+
+  let jogoCorrespondente = null;
+  let ultimojogo = null;
+
+    for (let i = 0; i < apiData.games.length; i++) {
+      const resultado = apiData.games[i].code;
+      const gameArray = i
+      const lastGameArray = (i - 1)
+
+      console.log("Resultado:", resultado);
+      console.log(gameArray)
+      console.log(apiData.games[gameArray])
+      console.log("ultimo jogo:", apiData.games[lastGameArray])
+      ;
+
+      if (resultado === "MPTMMHM762BTSFDQM") {
+        jogoCorrespondente = apiData.games[gameArray];
+        ultimojogo = apiData.games[lastGameArray];
+
+      console.log(ultimojogo)
+        break;
+      }
+    }
+
+  if (jogoCorrespondente, ultimojogo) {
+    console.log("Jogo Correspondente:", jogoCorrespondente);
+
+    const resultsData = JSON.parse(jogoCorrespondente.result);
+    const lastResulData = JSON.parse(ultimojogo.result);
+
+    console.log(lastResulData)
+    
+  const data= [
+    { Função: "Função Executiva - Controle Inibitório", Sigla: "FECI", 
+    Acerto: resultsData.AteA, Erro: resultsData.AteE, Omissões: resultsData.AteO,
+    AcertoLast: lastResulData.AteA, ErroLast: lastResulData.AteE, OmissõesLast: lastResulData.AteO},
+
+    { Função: "Atenção Seletiva - Esquerda", Sigla: "ASE", 
+    Acerto: resultsData.ConConA, Erro: resultsData.ConConE, Omissões: resultsData.ConConO, 
+    AcertoLast: lastResulData.ConConA, ErroLast: lastResulData.ConConE, OmissõesLast: lastResulData.ConConO},
+
+    { Função: "Atenção Seletiva - Direita", Sigla: "ASD", 
+    Acerto: resultsData.ConRConA, Erro: resultsData.ConRConE, Omissões: resultsData.ConRConO,  
+    AcertoLast: lastResulData.ConRConA, ErroLast: lastResulData.ConRConE, OmissõesLast: lastResulData.ConRConO},
+
+    { Função: "Atenção Alternada - Esquerda", Sigla: "AAE", 
+    Acerto: resultsData.ConAleA, Erro: resultsData.ConAleE, Omissões: resultsData.ConAleO, 
+    AcertoLast: lastResulData.ConAleA, ErroLast: lastResulData.ConAleE, OmissõesLast: lastResulData.ConAleO},
+
+    { Função: "Atenção Alternada - Direita", Sigla: "AAD",
+    Acerto: resultsData.ConRAleA, Erro: resultsData.ConRAleE, Omissões: resultsData.ConRAleO, 
+    AcertoLast: lastResulData.ConRAleA, ErroLast: lastResulData.ConRAleE, OmissõesLast: lastResulData.ConAleO},
+
+    { Função: "Memória de Curto Prazo - Esquerda", Sigla: "MCPE", 
+    Acerto: resultsData.ConMenA, Erro: resultsData.ConMenE, Omissões:  resultsData.ConMenO,  
+     AcertoLast: lastResulData.ConMenA, ErroLast: lastResulData.ConMenE, OmissõesLast: lastResulData.ConMenO},
+
+    { Função: "Memória de Curto Prazo - Direita", Sigla: "MCPD", 
+    Acerto: resultsData.ConRMenA, Erro: resultsData.ConRMenE, Omissões:  resultsData.ConRMenO,  
+    AcertoLast: lastResulData.ConRMenA, ErroLast: lastResulData.ConRMenE, OmissõesLast: lastResulData.ConRMenO},
+
+    { Função: "Visuopercepção", Sigla: "VP", 
+    Acerto: resultsData.VmenA, Erro: resultsData.VmenE, Omissões:  resultsData.VmenO, 
+    AcertoLast: lastResulData.VmenA,  ErroLast: lastResulData.VmenE, OmissõesLast: lastResulData.VmenO,},
+
+    { Função: "Memória de Longo Prazo", Sigla: "MLP", 
+    Acerto: resultsData.MenA, Erro: resultsData.MenE, Omissões: resultsData.MenO, 
+    AcertoLast: lastResulData.MenA, ErroLast: lastResulData.MenE, OmissõesLast: lastResulData.MenO},
   ];
 
   return (
@@ -75,7 +133,7 @@ const TableCompare = () => {
         </tbody>
       </table >
     </>
-  );
+  )};
 
 };
 

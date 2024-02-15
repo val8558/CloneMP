@@ -48,7 +48,6 @@ const Table = () => {
     ];
   ;
 
-console.log(data)
 
   return (
     <>
@@ -96,6 +95,3 @@ console.log(data)
 };
 
 export default Table;
-
-
-//"{\"Name\":\"BabyZoo\",\"Date\":637307030368567730,\"AteA\":23,\"AteE\":5,\"AteO\":7,\"AteT\":1,\"MenA\":10,\"MenE\":5,\"MenO\":5,\"ConAleA\":15,\"ConAleE\":1,\"ConAleF\":0,\"ConAleO\":0,\"ConAleD\":0,\"ConAleT\":1,\"ConConA\":14,\"ConConE\":0,\"ConConF\":1,\"ConConO\":1,\"ConConD\":0,\"ConConT\":0,\"ConMenA\":7,\"ConMenE\":0,\"ConMenF\":0,\"ConMenO\":0,\"ConMenD\":0,\"ConMenT\":1,\"ConRAleA\":14,\"ConRAleE\":1,\"ConRAleF\":0,\"ConRAleO\":0,\"ConRAleD\":0,\"ConRAleT\":0,\"ConRConA\":15,\"ConRConE\":0,\"ConRConF\":0,\"ConRConO\":0,\"ConRConD\":0,\"ConRConT\":0,\"ConRMenA\":7,\"ConRMenE\":0,\"ConRMenF\":1,\"ConRMenO\":0,\"ConRMenD\":0,\"ConRMenT\":1,\"ConPAleA\":6,\"ConPAleE\":1,\"ConPAleF\":0,\"ConPAleO\":0,\"ConPAleD\":0,\"ConPAleT\":1,\"ConPConA\":7,\"ConPConE\":0,\"ConPConF\":0,\"ConPConO\":0,\"ConPConD\":0,\"ConPConT\":1,\"ConPMenA\":0,\"ConPMenE\":0,\"ConPMenF\":0,\"ConPMenO\":0,\"ConPMenD\":0,\"ConPMenT\":0,\"VmenA\":32,\"VmenN\":28,\"VmenT\":2}"
