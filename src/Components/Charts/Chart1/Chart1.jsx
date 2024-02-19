@@ -40,7 +40,7 @@ function Chart1() {
         { name: "AAD", Acertos: resultsData.ConRAleA, Erros: resultsData.ConRAleE, Omissões: resultsData.ConRAleO},
         { name: "MCPE", Acertos: resultsData.ConMenA, Erros: resultsData.ConMenE, Omissões:  resultsData.ConMenO},
         { name: "MCPD", Acertos: resultsData.ConRMenA, Erros: resultsData.ConRMenE, Omissões:  resultsData.ConRMenO},
-        { name: "VP", Acertos: resultsData.VmenA, Erros: resultsData.VmenE, Omissões:  resultsData.VmenO},
+        { name: "VP", Acertos: resultsData.VmenA, Erros: resultsData.VmenN, Omissões:  resultsData.VmenO},
         { name: "MLP", Acertos: resultsData.MenA, Erros: resultsData.MenE, Omissões:  resultsData.MenO},
       ];
 

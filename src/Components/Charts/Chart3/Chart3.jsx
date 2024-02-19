@@ -1,7 +1,30 @@
+import { useAuth } from "../../../Context/AuthContext";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import styles from './Chart.module.css'
 
+
 function Chart3() {
+    const {apiData} = useAuth ();
+
+    // const primeiroJogo = apiData.games.results[0];
+    // const segundoJogo = apiData.games.results[1];
+    // const terceiroJogo = apiData.games.results[2];
+    // const quartoJogo = apiData.games.results[3];
+    // const quintoJogo = apiData.games.results[5];
+    // const sextoJogo = apiData.games.results[6];
+    // const setimoJogo = apiData.games.results[7];
+    // const oitavoJogo = apiData.games.results[8];
+    // const nonoJogo = apiData.games.results[9];
+    // const decimoJogo = apiData.games.results[10];
+    // const decimoPrimeiroJogo = apiData.games.results[11];
+    // const decimoSegundoJogo = apiData.games.results[12];
+    // ;
+    
+
+    function media (a, b, c) {
+         media = (a - b - c);
+    }
+
     const data = [
         { name: "Aircraftgifts", FECI: 0.27, ASE: 0.71, ASD: 1, AAE: 0.82, AAD: 0.93, MCPE: 0.46, MCPD: 0.32, VP: 0.33, MLP:  0.67},
         { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP: 0 },
@@ -30,7 +53,6 @@ function Chart3() {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" type="category" />
                     <YAxis type="number" domain={[0, 1]}/>
-                    <Tooltip />
                     <Legend />
                     <Bar dataKey="FECI" fill="#699855" />
                     <Bar dataKey="ASE" fill="#FA5F8D" />

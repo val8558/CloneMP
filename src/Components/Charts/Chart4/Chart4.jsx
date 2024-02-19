@@ -30,7 +30,6 @@ function Chart4() {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" type="category" />
                     <YAxis type="number" domain={[-1, 1]}/>
-                    <Tooltip />
                     <Legend />
                     <Bar dataKey="FECI" fill="#699855" />
                     <Bar dataKey="ASE" fill="#FA5F8D" />
