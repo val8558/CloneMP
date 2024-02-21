@@ -40,4 +40,5 @@ td, th {
   background-color: var(--amarelo);
   padding: 1rem;
   color: white;
+  border-radius: 10px;
 }

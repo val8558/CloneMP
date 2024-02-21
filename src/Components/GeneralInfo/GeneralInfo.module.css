@@ -6,6 +6,7 @@
     margin-bottom: rem;
     padding: 05rem;
     text-align: justify;
+    width: fit-content;
 
 }
 
@@ -19,10 +20,39 @@
     padding: 1rem;
     color: white;
     margin-top: 2rem;
+    border-radius: 10px
 }
 
 .cards p {
     font-family: 'Exo';
     font-weight: lighter;
     line-height: 1.5rem;
+}
+
+.cards h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Exo';
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background-color: lightgray;
+    padding: 1rem;
+    color: black;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.cards h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo';
+    width: 50;
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 1rem;
+    color: black;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
 }
