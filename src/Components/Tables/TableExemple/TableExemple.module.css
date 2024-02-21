@@ -3,7 +3,13 @@
     margin: 0 auto;
     font-family: 'Exo';
   }
-  
+
+  .table1 {
+    border-collapse: collapse;
+    margin: 6.5rem;
+    font-family: 'Exo';
+  }
+    
   .evenRow {
     background-color: #30B479;
   }
@@ -13,7 +19,7 @@
   }
   
   td, th {
-    padding: 8px;
+    padding: px;
     text-align: center;
     border: 1px solid black;
   }

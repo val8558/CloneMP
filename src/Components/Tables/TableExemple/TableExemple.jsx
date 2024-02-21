@@ -79,7 +79,7 @@ const TableExemple = () => {
         <br />
       </div>
 
-      <table className={styles.table}>
+      <table className={styles.table1}>
         <thead>
           <tr>
             <th>Função Cognitiva</th>
