@@ -18,7 +18,7 @@ function Chart3() {
             AAD:  resultObject.ConRAleA - resultObject.ConRAleE - resultObject.ConRAleO,
             MCPE: resultObject.ConMenA - resultObject.ConMenE - resultObject.ConMenO,
             MCPD: resultObject.ConRMenA - resultObject.ConRMenE - resultObject.ConRMenO,
-            VP:   resultObject.VmenA - resultObject.VmenN - resultObject.VmenO,
+            VP:   resultObject.VmenA - resultObject.VmenN,
             MLP:  resultObject.MenA - resultObject.MenE - resultObject.MenO,
         };
     });

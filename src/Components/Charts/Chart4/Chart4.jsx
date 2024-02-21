@@ -8,15 +8,15 @@ function Chart4() {
 
     const data = apiData.games.map(item => {
         const resultObject = JSON.parse(item.result);
-        const FECIPercentage = ((resultObject.AteA - resultObject.AteE - resultObject.AteO) / 100);
-        const ASEPercentage = ((resultObject.ConConA - resultObject.ConConE - resultObject.ConConO) / 100);
-        const ASDPercentage = ((resultObject.ConRConA - resultObject.ConRConE - resultObject.ConRConO) / 100);
-        const AAEPercentage = ((resultObject.ConAleA - resultObject.ConAleE - resultObject.ConAleO) / 100);
-        const AADPercentage = ((resultObject.ConRAleA - resultObject.ConRAleE - resultObject.ConRAleO) / 100);
-        const MCPEPercentage = ((resultObject.ConMenA - resultObject.ConMenE - resultObject.ConMenO) / 100);
-        const MCPDPercentage = ((resultObject.ConRMenA - resultObject.ConRMenE - resultObject.ConRMenO) / 100);
-        const VPPercentage = ((resultObject.VmenA - resultObject.VmenN) / 100);
-        const MLPPercentage = ((resultObject.MenA - resultObject.MenE - resultObject.MenO) / 100);
+        const FECIPercentage = ((resultObject.AteA - resultObject.AteE - resultObject.AteO));
+        const ASEPercentage = ((resultObject.ConConA - resultObject.ConConE - resultObject.ConConO));
+        const ASDPercentage = ((resultObject.ConRConA - resultObject.ConRConE - resultObject.ConRConO));
+        const AAEPercentage = ((resultObject.ConAleA - resultObject.ConAleE - resultObject.ConAleO));
+        const AADPercentage = ((resultObject.ConRAleA - resultObject.ConRAleE - resultObject.ConRAleO));
+        const MCPEPercentage = ((resultObject.ConMenA - resultObject.ConMenE - resultObject.ConMenO));
+        const MCPDPercentage = ((resultObject.ConRMenA - resultObject.ConRMenE - resultObject.ConRMenO));
+        const VPPercentage = ((resultObject.VmenA - resultObject.VmenN));
+        const MLPPercentage = ((resultObject.MenA - resultObject.MenE - resultObject.MenO));
 
         return {
             name: resultObject.Name,
