@@ -1,40 +1,29 @@
 import { useAuth } from "../../../Context/AuthContext";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import styles from './Chart.module.css'
+import { object } from "prop-types";
 
 
 function Chart3() {
-    const {apiData} = useAuth ();
+    const { apiData } = useAuth();
 
-    // const primeiroJogo = apiData.games.results[0];
-    // const segundoJogo = apiData.games.results[1];
-    // const terceiroJogo = apiData.games.results[2];
-    // const quartoJogo = apiData.games.results[3];
-    // const quintoJogo = apiData.games.results[5];
-    // const sextoJogo = apiData.games.results[6];
-    // const setimoJogo = apiData.games.results[7];
-    // const oitavoJogo = apiData.games.results[8];
-    // const nonoJogo = apiData.games.results[9];
-    // const decimoJogo = apiData.games.results[10];
-    // const decimoPrimeiroJogo = apiData.games.results[11];
-    // const decimoSegundoJogo = apiData.games.results[12];
-    // ;
-    
+    const data = apiData.games.map(item => {
+        const resultObject = JSON.parse(item.result);
+        return {
+            name: resultObject.Name,
+            FECI: resultObject.AteA - resultObject.AteE - resultObject.AteO,
+            ASE:  resultObject.ConConA - resultObject.ConConE - resultObject.ConConO,
+            ASD:  resultObject.ConRConA - resultObject.ConRConE - resultObject.ConRConO,
+            AAE:  resultObject.ConAleA - resultObject.ConAleE - resultObject.ConAleO,
+            AAD:  resultObject.ConRAleA - resultObject.ConRAleE - resultObject.ConRAleO,
+            MCPE: resultObject.ConMenA - resultObject.ConMenE - resultObject.ConMenO,
+            MCPD: resultObject.ConRMenA - resultObject.ConRMenE - resultObject.ConRMenO,
+            VP:   resultObject.VmenA - resultObject.VmenN - resultObject.VmenO,
+            MLP:  resultObject.MenA - resultObject.MenE - resultObject.MenO,
+        };
+    });
 
-    function media (a, b, c) {
-         media = (a - b - c);
-    }
-
-    const data = [
-        { name: "Aircraftgifts", FECI: 0.27, ASE: 0.71, ASD: 1, AAE: 0.82, AAD: 0.93, MCPE: 0.46, MCPD: 0.32, VP: 0.33, MLP:  0.67},
-        { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP: 0 },
-        { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP:  0},
-        { name: "Aircraftgifts", FECI: 0.91, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP:0},
-        { name: "Drop Fruits", FECI: 0, ASE: 0.67, ASD: 0, AAE: 0.27, AAD: 0.13, MCPE: 0, MCPD: 0, VP: 0.05, MLP: 0 },
-        { name: "Pirate Party", FECI: 0.68, ASE: 1, ASD: 0.75, AAE: 0.88, AAD: 0.88, MCPE: 0.5, MCPD: 0.07, VP: 0.07, MLP: 0.58 },
-        { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP: 0 },
-        { name: "Aircraftgifts", FECI: 0.88, ASE: 1, ASD: 0.87, AAE: 0.88, AAD: 0.94, MCPE: 0.4, MCPD: 1, VP: 0.43, MLP: 0.58 },
-    ];
+console.log(data)
 
     return (
 
@@ -52,7 +41,8 @@ function Chart3() {
                 <BarChart width={900} height={600} data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" type="category" />
-                    <YAxis type="number" domain={[0, 1]}/>
+                    <YAxis type="number" domain={[0, 1]} />
+                    <Tooltip />
                     <Legend />
                     <Bar dataKey="FECI" fill="#699855" />
                     <Bar dataKey="ASE" fill="#FA5F8D" />
@@ -60,9 +50,9 @@ function Chart3() {
                     <Bar dataKey="AAE" fill="#139Abe" />
                     <Bar dataKey="AAD" fill="#2C8AF2" />
                     <Bar dataKey="MCPE" fill="#42DC8B" />
-                    <Bar dataKey="MCPD" fill="#F2AE2C"/>
+                    <Bar dataKey="MCPD" fill="#F2AE2C" />
                     <Bar dataKey="VP" fill="#F25B2C" />
-                    <Bar dataKey="MLP" fill="#722F3E"/>
+                    <Bar dataKey="MLP" fill="#722F3E" />
 
                 </BarChart>
             </div>

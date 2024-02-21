@@ -1,17 +1,38 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import styles from './Chart.module.css'
+import { useAuth } from "../../../Context/AuthContext";
 
 function Chart4() {
-    const data = [
-        { name: "Aircraftgifts", FECI: -0.71, ASE: 0.08, ASD: 0.15, AAE: 0.8, AAD: 0.08, MCPE: 0, MCPD: 0.32, VP: 0.66, MLP:  0},
-        { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP: 0 },
-        { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP:  0},
-        { name: "Aircraftgifts", FECI: 0.4, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP:0},
-        { name: "Drop Fruits", FECI: -1, ASE: -0.23, ASD: -1, AAE: -0.69, AAD: -0.85, MCPE: -1, MCPD: -1, VP: -0.95, MLP: -1 },
-        { name: "Pirate Party", FECI: -0.25, ASE: 0.15, ASD: -0.08, AAE: 0.15, AAD: 0.08, MCPE: 0, MCPD: -0.83, VP: -0.93, MLP: -0.08 },
-        { name: "BabyZoo", FECI: 0, ASE: 0, ASD: 0, AAE: 0, AAD: 0, MCPE: 0, MCPD: 0, VP: 0, MLP: 0 },
-        { name: "Aircraftgifts", FECI: 0.04, ASE: 0.15, ASD: 0, AAE: 0.15, AAD: 0.15, MCPE: -0.33, MCPD: 0.17, VP: -0.55, MLP: -0.08 },
-    ];
+
+    const { apiData } = useAuth();
+
+    const data = apiData.games.map(item => {
+        const resultObject = JSON.parse(item.result);
+        const FECIPercentage = ((resultObject.AteA - resultObject.AteE - resultObject.AteO) / 100);
+        const ASEPercentage = ((resultObject.ConConA - resultObject.ConConE - resultObject.ConConO) / 100);
+        const ASDPercentage = ((resultObject.ConRConA - resultObject.ConRConE - resultObject.ConRConO) / 100);
+        const AAEPercentage = ((resultObject.ConAleA - resultObject.ConAleE - resultObject.ConAleO) / 100);
+        const AADPercentage = ((resultObject.ConRAleA - resultObject.ConRAleE - resultObject.ConRAleO) / 100);
+        const MCPEPercentage = ((resultObject.ConMenA - resultObject.ConMenE - resultObject.ConMenO) / 100);
+        const MCPDPercentage = ((resultObject.ConRMenA - resultObject.ConRMenE - resultObject.ConRMenO) / 100);
+        const VPPercentage = ((resultObject.VmenA - resultObject.VmenN) / 100);
+        const MLPPercentage = ((resultObject.MenA - resultObject.MenE - resultObject.MenO) / 100);
+
+        return {
+            name: resultObject.Name,
+            FECI: FECIPercentage,
+            ASE:  ASEPercentage,
+            ASD:  ASDPercentage,
+            AAE:  AAEPercentage,
+            AAD:  AADPercentage,
+            MCPE: MCPEPercentage,
+            MCPD: MCPDPercentage,
+            VP:   VPPercentage,
+            MLP:  MLPPercentage,
+        };
+    });
+
+
 
     return (
 
@@ -31,6 +52,7 @@ function Chart4() {
                     <XAxis dataKey="name" type="category" />
                     <YAxis type="number" domain={[-1, 1]}/>
                     <Legend />
+                    <Tooltip />
                     <Bar dataKey="FECI" fill="#699855" />
                     <Bar dataKey="ASE" fill="#FA5F8D" />
                     <Bar dataKey="ASD" fill="#CD4C6B" />

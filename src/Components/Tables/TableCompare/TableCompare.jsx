@@ -68,8 +68,8 @@ const TableCompare = () => {
     AcertoLast: lastResulData.ConRMenA, ErroLast: lastResulData.ConRMenE, OmissõesLast: lastResulData.ConRMenO},
 
     { Função: "Visuopercepção", Sigla: "VP", 
-    Acerto: resultsData.VmenA, Erro: resultsData.VmenE, Omissões:  resultsData.VmenO, 
-    AcertoLast: lastResulData.VmenA,  ErroLast: lastResulData.VmenE, OmissõesLast: lastResulData.VmenO,},
+    Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões:  resultsData.VmenO, 
+    AcertoLast: lastResulData.VmenA,  ErroLast: lastResulData.VmenN, OmissõesLast: lastResulData.VmenO,},
 
     { Função: "Memória de Longo Prazo", Sigla: "MLP", 
     Acerto: resultsData.MenA, Erro: resultsData.MenE, Omissões: resultsData.MenO, 

@@ -21,7 +21,7 @@ function ReportCharts() {
     <Chart1 />
     <Chart2 />
     <Chart3 />
-    {/* <Chart4 /> */}
+    <Chart4 />
     <Footer />   
 
     
