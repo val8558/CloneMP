@@ -38,7 +38,7 @@ const Table = () => {
       { Função: "Atenção Alternada - Direita", Sigla: "AAD", Acerto: resultsData.ConRAleA, Erro: resultsData.ConRAleE, Omissões: resultsData.ConRAleO, Média: 11, Pe: "13±2" },
       { Função: "Memória de Curto Prazo - Esquerda", Sigla: "MCPE", Acerto: resultsData.ConMenA, Erro: resultsData.ConMenE, Omissões:  resultsData.ConMenO, Média: 5, Pe: "6±1"  },
       { Função: "Memória de Curto Prazo - Direita", Sigla: "MCPD", Acerto: resultsData.ConRMenA, Erro: resultsData.ConRMenE, Omissões:  resultsData.ConRMenO,  Média: 5, Pe: "6±1"},
-      { Função: "Visuopercepção", Sigla: "VP", Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões:  resultsData.VmenO, Média: 44, Pe: "52±8"},
+      { Função: "Visuopercepção", Sigla: "VP", Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões: 0, Média: 44, Pe: "52±8"},
       { Função: "Memória de Longo Prazo", Sigla: "MLP", Acerto: resultsData.MenA, Erro: resultsData.MenE, Omissões: resultsData.MenO, Média: 9, Pe:"12±3"}
     ];
   ;

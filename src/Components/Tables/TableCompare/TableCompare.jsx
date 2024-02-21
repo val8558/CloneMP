@@ -59,8 +59,8 @@ const TableCompare = () => {
     AcertoLast: lastResulData.ConRMenA, ErroLast: lastResulData.ConRMenE, OmissõesLast: lastResulData.ConRMenO},
 
     { Função: "Visuopercepção", Sigla: "VP", 
-    Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões:  resultsData.VmenO, 
-    AcertoLast: lastResulData.VmenA,  ErroLast: lastResulData.VmenN, OmissõesLast: lastResulData.VmenO,},
+    Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões: 0, 
+    AcertoLast: lastResulData.VmenA, ErroLast: lastResulData.VmenN, OmissõesLast: 0,},
 
     { Função: "Memória de Longo Prazo", Sigla: "MLP", 
     Acerto: resultsData.MenA, Erro: resultsData.MenE, Omissões: resultsData.MenO, 
@@ -95,12 +95,12 @@ const TableCompare = () => {
               className={index % 2 === 0 ? styles.evenRow : styles.oddRow}>
               <td>{item.Função}</td>
               <td>{item.Sigla}</td>
-              <td>{item.Acerto}</td>
               <td>{item.AcertoLast}</td>
-              <td>{item.Erro}</td>
+              <td>{item.Acerto}</td>
               <td>{item.ErroLast}</td>
-              <td>{item.Omissões}</td>
+              <td>{item.Erro}</td>
               <td>{item.OmissõesLast}</td>
+              <td>{item.Omissões}</td>
             </tr>
           ))}
         </tbody>
