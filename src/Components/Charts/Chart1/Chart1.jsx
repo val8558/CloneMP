@@ -42,7 +42,7 @@ function Chart1() {
         <div className={styles.name}>
           <h1>Desempenho Da Sessão Diária</h1>
           <br />
-          <p>Os Gráficos abaixo representam os resultados da sessão diária. Nos gráficos abaixo você poderá observar a quantidade de acertos, erros e omissões em cada categoria. É importante lembrar que na tabela acima encontramos o parametro dos valores</p>
+          <p>Os gráficos representam os resultados de cada sessão diariamente. Nos gráficos você pode observar a quantidade de acertos, erros e omissões em cada função cognitiva. É importante lembrar que na tabela acima encontramos o parâmetro dos valores, os resultados esperados, os obtidos pelo paciente em cada sessão e as sessões realizadas.</p>
         </div>
         <div className={styles.chart}>
           <BarChart width={900} height={600} data={data} layout="vertical">
