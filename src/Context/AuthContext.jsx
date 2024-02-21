@@ -7,6 +7,7 @@ export const AuthContext = createContext({});
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [apiData, setApiData] = useState(null);
+  const [gameKey, setGameKey] = useState("");
   const navigate = useNavigate();
 
   const authenticateWithCode = async (gameCode) => {
@@ -18,6 +19,7 @@ export const AuthProvider = ({ children }) => {
         console.log(response.data)
         setUser(response.data.user);
         setApiData(response.data);
+        setGameKey(gameCode)
         navigate ('/Report')
       } else {
         console.error("Falha na autenticação.");
@@ -28,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, apiData, authenticateWithCode}}>
+    <AuthContext.Provider value={{ user, apiData, authenticateWithCode, gameKey}}>
       {children}
     </AuthContext.Provider>
   );

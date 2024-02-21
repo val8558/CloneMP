@@ -4,7 +4,7 @@ import styles from './tableCompare.module.css'
 
 const TableCompare = () => {
 
-  const {apiData} = useAuth();
+  const {apiData, gameKey} = useAuth();
 
 
   let jogoCorrespondente = null;
@@ -13,25 +13,16 @@ const TableCompare = () => {
     for (let i = 0; i < apiData.games.length; i++) {
       const resultado = apiData.games[i].code;
       const gameArray = i
-      const lastGameArray = (i - 1)
+      const lastGameArray = (i - 1);
 
-      console.log("Resultado:", resultado);
-      console.log(gameArray)
-      console.log(apiData.games[gameArray])
-      console.log("ultimo jogo:", apiData.games[lastGameArray])
-      ;
-
-      if (resultado === "MPTMMHM762BTSFDQM") {
+      if (resultado === gameKey) {
         jogoCorrespondente = apiData.games[gameArray];
         ultimojogo = apiData.games[lastGameArray];
-
-      console.log(ultimojogo)
         break;
       }
     }
 
   if (jogoCorrespondente, ultimojogo) {
-    console.log("Jogo Correspondente:", jogoCorrespondente);
 
     const resultsData = JSON.parse(jogoCorrespondente.result);
     const lastResulData = JSON.parse(ultimojogo.result);

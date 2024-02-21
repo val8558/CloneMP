@@ -6,13 +6,14 @@ import { AuthContext } from '../../Context/AuthContext'
 
 function Login() {
   const [gameKey, setGameKey] = useState("");
-  const { authenticateWithCode } = useContext(AuthContext);
+  const {authenticateWithCode } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(gameKey)
     authenticateWithCode(gameKey);
   }
+
    
   return (
     <>

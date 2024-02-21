@@ -3,7 +3,7 @@ import styles from './Chart.module.css'
 import { useAuth } from "../../../Context/AuthContext";
 
 function Chart2() {
-  const {apiData} = useAuth();
+  const {apiData, gameKey} = useAuth();
 
   let jogoCorrespondente = null;
 
@@ -11,7 +11,7 @@ function Chart2() {
       const resultado = apiData.games[i].code;
       
       const gameArray = i;
-      if (resultado === "MPTMMHM762BTSFDQM") {
+      if (resultado === gameKey) {
         jogoCorrespondente = apiData.games[gameArray]
         break;
       }

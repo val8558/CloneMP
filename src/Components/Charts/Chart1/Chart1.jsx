@@ -2,11 +2,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "rec
 import styles from './Chart.module.css'
 import { useAuth } from '../../../Context/AuthContext'
 
+
 function Chart1() {
-  const {apiData} = useAuth();
-
-
-  console.log("API Data:", apiData);
+  const {apiData, gameKey} = useAuth();
 
   let jogoCorrespondente = null;
 
@@ -14,12 +12,7 @@ function Chart1() {
       const resultado = apiData.games[i].code;
       const gameArray = i
 
-      console.log("Resultado:", resultado);
-      console.log(gameArray)
-      console.log(apiData.games[gameArray])
-      ;
-
-      if (resultado === "MPTMMHM762BTSFDQM") {
+      if (resultado === gameKey) {
         jogoCorrespondente = apiData.games[gameArray];
 
       console.log()
@@ -28,7 +21,7 @@ function Chart1() {
     }
 
   if (jogoCorrespondente) {
-    console.log("Jogo Correspondente:", jogoCorrespondente);
+
 
     const resultsData = JSON.parse(jogoCorrespondente.result);
 

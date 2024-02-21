@@ -4,34 +4,29 @@ import nokay from '../../../assets/alert.svg'
 import {useAuth} from '../../../Context/AuthContext'
 
 
+
 const Table = () => {
 
-  const {apiData} = useAuth();
+  const {apiData, gameKey} = useAuth();
+  
 
 
   console.log("API Data:", apiData);
+  console.log("game Key", gameKey)
 
   let jogoCorrespondente = null;
 
     for (let i = 0; i < apiData.games.length; i++) {
       const resultado = apiData.games[i].code;
-      const gameArray = i
+      const gameArray = i;
 
-      console.log("Resultado:", resultado);
-      console.log(gameArray)
-      console.log(apiData.games[gameArray])
-      ;
-
-      if (resultado === "MPTMMHM762BTSFDQM") {
+      if (resultado === gameKey) {
         jogoCorrespondente = apiData.games[gameArray];
-
-      console.log()
         break;
       }
     }
 
   if (jogoCorrespondente) {
-    console.log("Jogo Correspondente:", jogoCorrespondente);
 
     const resultsData = JSON.parse(jogoCorrespondente.result);
 
