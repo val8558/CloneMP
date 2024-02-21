@@ -34,7 +34,7 @@ const TableResult = () => {
     { Função: "Atenção Alternada - Direita", Sigla: "AAD", Acerto: resultsData.ConRAleA, Erro: resultsData.ConRAleE, Omissões: resultsData.ConRAleO, Desvio: "±4", Normal: 11, DisLev:"10 - 8", DisMed:"7 - 5", DisGrav:"4 - 2"},
     { Função: "Memória de Curto Prazo - Esquerda", Sigla: "MCPE", Acerto: resultsData.ConMenA, Erro: resultsData.ConMenE, Omissões:  resultsData.ConMenO, Desvio: "±1", Normal: 1, DisLev:"5 - 4", DisMed:" 3 - 2", DisGrav:"1"},
     { Função: "Memória de Curto Prazo - Direita", Sigla: "MCPD", Acerto: resultsData.ConRMenA, Erro: resultsData.ConRMenE, Omissões:  resultsData.ConRMenO, Desvio: "±1", Normal: 1, DisLev:"5 - 4", DisMed:"3 - 2", DisGrav:"1"},
-    { Função: "Visuopercepção", Sigla: "VP", Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões:  resultsData.VmenO, Desvio: "±8", Normal: 44, DisLev:"43 - 35", DisMed:"34 - 26", DisGrav:"25 - 17"},
+    { Função: "Visuopercepção", Sigla: "VP", Acerto: resultsData.VmenA, Erro: resultsData.VmenN, Omissões: 0, Desvio: "±8", Normal: 44, DisLev:"43 - 35", DisMed:"34 - 26", DisGrav:"25 - 17"},
     { Função: "Memória de Longo Prazo", Sigla: "MLP", Acerto: resultsData.MenA, Erro: resultsData.MenE, Omissões: resultsData.MenO, Desvio: "±3", Normal: 12, DisLev:"11 - 8", DisMed:"7 - 4", DisGrav:"3"}
   ];
 
