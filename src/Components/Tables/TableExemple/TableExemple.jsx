@@ -30,7 +30,7 @@ const TableExemple = () => {
     <>
       <div className={styles.name}>
         <h1>Como interpretar os dados da tabela MentalPlus®</h1>
-        <p>Para conseguir reconhecer as dificuldades da pessoa avaliada ou reabilitada pelo MentalPlus  é necessário observar a coluna Resultados Obtidos que é o cálculo feito a partir dos pontos obtidos nas colunas Acertos; Erros; Omissões.</p>
+        <p>Para conseguir reconhecer as dificuldades da pessoa avaliada ou reabilitada pelo MentalPlus®  é necessário observar a coluna Resultados Obtidos que é o cálculo feito a partir dos pontos obtidos nas colunas Acertos; Erros; Omissões.</p>
         <br />
         <p>Esta coluna Resultados Obtidos deve ser associada à coluna Resultados Esperados para que o avaliador possa interpretar as disfunções cognitivas ou as funções cognitivas que estão preservadas na pessoa que foi avaliada ou está sendo reabilitada.</p>
         <br />
@@ -73,9 +73,9 @@ const TableExemple = () => {
 
       <div className={styles.name}>
         <h2>Veja um Exemplo</h2>
-        <p>Paciente com queixa de tremor, queda espontânea e esquecimento constante de senhas bancárias e compromissos importantes. Quando avaliado pelo jogo digital MentalPlus tinha 54 anos. Na tabela abaixo os resultados avaliativos evidenciam prejuízo cognitivo nas funções executivas, mnemônicas e visuoconstrutivas. A HD neuropsicológica foi de Doença de Parkinson e solicitado exame de neuroimagem, bem como exames laboratoriais para auxílio na conclusão avaliativa. Os exames complementares corroboraram com a HD e o DDf foi de DP. (Doença de Parkinson, sendo solicitado intervenção medicamentosa, acompanhamento neurológico, conduta neuropsiquiátrica e reabilitação neuropsicológica.</p>
+        <p>Paciente com queixa de tremor, queda espontânea e esquecimento constante de senhas bancárias e compromissos importantes. Quando avaliado pelo jogo digital MentalPlus® tinha 54 anos. Na tabela abaixo os resultados avaliativos evidenciam prejuízo cognitivo nas funções executivas, mnemônicas e visuoconstrutivas. A HD neuropsicológica foi de Doença de Parkinson e solicitado exame de neuroimagem, bem como exames laboratoriais para auxílio na conclusão avaliativa. Os exames complementares corroboraram com a HD e o DDf foi de DP. (Doença de Parkinson, sendo solicitado intervenção medicamentosa, acompanhamento neurológico, conduta neuropsiquiátrica e reabilitação neuropsicológica.</p>
         <br />
-        <p>A reabilitação neuropsicológica foi realizada com MentalPlus, em uma série de 12 sessões, uma vez por semana com técnicas de estimulação elétrica concomitantes. Na tabela abaixo estão expostos os resultados da sessão avaliativa com MentalPlus e 04 (quatro) sessões de reabilitação cognitiva do mesmo instrumento. Observa-se o progresso substancial e efetivo em todas as funções cognitivas progressivamente chegando a 4ª sessão com todas as funções dentro dos resultados esperados em classificação (Normal).</p>
+        <p>A reabilitação neuropsicológica foi realizada com MentalPlus®, em uma série de 12 sessões, uma vez por semana com técnicas de estimulação elétrica concomitantes. Na tabela abaixo estão expostos os resultados da sessão avaliativa com MentalPlus® e 04 (quatro) sessões de reabilitação cognitiva do mesmo instrumento. Observa-se o progresso substancial e efetivo em todas as funções cognitivas progressivamente chegando a 4ª sessão com todas as funções dentro dos resultados esperados em classificação (Normal).</p>
         <br />
       </div>
 

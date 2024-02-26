@@ -10,7 +10,7 @@ function Header() {
             <div className={style.header}>
                 <img src={logo} alt="logo mental plus" />
                 <div className={style.title}>
-                    <h1>Relatório MentalPlus</h1>
+                    <h1>Relatório MentalPlus®</h1>
                 </div>
             </div>
         </>
