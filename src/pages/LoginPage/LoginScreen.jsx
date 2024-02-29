@@ -1,12 +1,23 @@
-import { useState,useContext } from 'react'
+import { useState,useContext,useEffect } from 'react'
 import DrImg from '../../assets/DraBck.svg'
 import logo from '../../assets/logoMentalPlus.png'
 import style from './login.module.css'
 import { AuthContext } from '../../Context/AuthContext'
+import { useLocation, redirect } from 'react-router-dom'
 
 function Login() {
   const [gameKey, setGameKey] = useState("");
   const {authenticateWithCode } = useContext(AuthContext);
+  const location = useLocation();
+
+
+    useEffect(() => {
+    const codeFromURL = new URLSearchParams(location.search).get('code');
+    if (codeFromURL) {
+      authenticateWithCode(codeFromURL);
+    }
+  }, [location.search, authenticateWithCode]);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
