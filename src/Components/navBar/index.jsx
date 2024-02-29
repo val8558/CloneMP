@@ -2,6 +2,7 @@ import style from './navBar.module.css';
 import chartIcon from '../../assets/chartIcon.svg';
 import infoIcon from '../../assets/InfoIcon.svg';
 import tableIcon from '../../assets/tableIcon.svg';
+import printIcon from '../../assets/printer.svg';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
@@ -24,6 +25,12 @@ function NavBar() {
           <button>
             <img src={chartIcon} width="37px" height="37" alt="" />
             Gráficos
+          </button>
+        </Link>
+        <Link to="/impressao" className={style.link}>
+          <button>
+            <img src={printIcon} width="37px" height="37" alt="" />
+            Versão para Impressão
           </button>
         </Link>
       </div>
